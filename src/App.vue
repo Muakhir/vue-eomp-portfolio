@@ -2,7 +2,6 @@
   <main class="container-fluid">
     <div>
       <NavBar/>
-      <Footer/>
     </div>
   <router-view/>
   </main>
@@ -14,6 +13,7 @@
     <router-link to="/testimonials">Testimonials</router-link> |
     <router-link to="/reachme">Reach Me</router-link>
   </nav> -->
+  <div><Footer/></div>
 </template>
 
 <script>
@@ -29,17 +29,19 @@
   }
 </script>
 
-<style>
+<style >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #c2b8a9;
 }
 
 nav {
   padding: 30px;
+  font-size: larger;
 }
 
 nav a {
@@ -47,7 +49,10 @@ nav a {
   color: #2c3e50;
 }
 
-nav:hover {
-  color: #040404;
+.logo{
+  width: 110px;
+  height: 30px;
 }
+
+
 </style>
