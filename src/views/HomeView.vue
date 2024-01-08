@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="row" v-if="fetchjobtitle">
+
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  name: 'HomeViewComp',
+  computed:{
+    jobTitle(){
+      return this.$store.state.jobTitle;
+    },
+    mounted(){
+      this.$store.dispatch('fetchjobTitle')
+    }
   }
 }
 </script>
