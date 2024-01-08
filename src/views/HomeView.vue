@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="row" v-if="fetchjobtitle">
+    <div class="row" v-if="fetchAbout">
 
     </div>
   </div>
@@ -13,11 +13,11 @@ export default {
   name: 'HomeViewComp',
   computed:{
     jobTitle(){
-      return this.$store.state.jobTitle;
+      return this.$store.state.about
+    }
     },
     mounted(){
-      this.$store.dispatch('fetchjobTitle')
+      this.$store.dispatch('fetchAbout')
     }
-  }
 }
 </script>

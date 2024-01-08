@@ -1,8 +1,8 @@
 import { createStore } from 'vuex'
-const dataUrl = 'https://github.com/Muakhir/vue-eomp-data.git'
+const dataUrl = 'https://muakhir.github.io/vue-eomp-data/'
 export default createStore({
   state: {
-    jobTitle: null,
+    Home: null,
     About: null,
     education: null,
     skills: null,
@@ -12,8 +12,8 @@ export default createStore({
   getters: {
   },
   mutations: {
-    setJobTitle(state, value) {
-      state.jobTitle = value
+    setHome(state, value) {
+      state.Home = value
     },
     setAbout(state, value) {
       state.About = value
