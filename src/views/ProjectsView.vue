@@ -9,8 +9,7 @@
         <a :href="project.netlify" class="btn btn-primary" target="_blank">Netlify</a>
   </div>
 </div>
-
-    </div>
+</div>
 </template>
 
 <script>

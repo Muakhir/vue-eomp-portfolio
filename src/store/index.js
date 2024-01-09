@@ -39,13 +39,13 @@ export default createStore({
     },
     async getEducation(context) {
       const response = await fetch(dataUrl)
-      const data = await response.json()
-      context.commit('setEducation', data)
+      const {education} = await response.json()
+      context.commit('setEducation', education)
     },
     async getSkills(context) {
       const response = await fetch(dataUrl)
-      const data = await response.json()
-      context.commit('setSkills', data)
+      const {skills} = await response.json()
+      context.commit('setSkills', skills)
     },
     async getProjects(context) {
       const response = await fetch(dataUrl)
