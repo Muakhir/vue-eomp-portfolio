@@ -1,5 +1,5 @@
 import { createStore } from 'vuex'
-const dataUrl = 'https://muakhir.github.io/vue-eomp-data/'
+const dataUrl = 'https://muakhir.github.io/vue-eomp-data/Data/'
 export default createStore({
   state: {
     Home: null,
@@ -13,10 +13,10 @@ export default createStore({
   },
   mutations: {
     setHome(state, value) {
-      state.Home = value
+      state.home = value
     },
     setAbout(state, value) {
-      state.About = value
+      state.about = value
     },
     setEducation(state, value) {
       state.education = value
@@ -25,7 +25,7 @@ export default createStore({
       state.skills = value
     },
     setProjects(state, value) {
-      state.Projects = value
+      state.projects = value
     },
     setTestimonials(state, value) {
       state.testimonials = value
@@ -34,8 +34,8 @@ export default createStore({
   actions: {
     async getAbout(context) {
       const response = await fetch(dataUrl)
-      const data = await response.json()
-      context.commit('setAbout', data)
+      const {about} = await response.json()
+      context.commit('setAbout', about)
     },
     async getEducation(context) {
       const response = await fetch(dataUrl)
