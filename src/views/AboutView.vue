@@ -8,10 +8,10 @@
         </p>
      </div>
       <div class="row Aimg mb-5">
-        <img src="https://drive.google.com/uc?id=1bU7mGr6BdJeaMAjclS2gQ81NF8xfwP4N" loading="lazy" class="Aimg1" alt="Gaming Setup">
-        <img src="https://drive.google.com/uc?id=1jKx287Dm5etmIHxGdfl8-EV7QADWXOha" loading="lazy" class="Aimg1" alt="tech">
-        <img src="https://drive.google.com/uc?id=1gpx3LZWyCdE-C4H4OB0GrFon9kh_PZXr" loading="lazy" class="Aimg1" alt="Dev">
-        <img src="https://drive.google.com/uc?id=1gpx3LZWyCdE-C4H4OB0GrFon9kh_PZXr" loading="lazy" class="Aimg1" alt="Dev">
+        <img src="https://iili.io/J76T6uI.md.jpg" loading="lazy" class="Aimg1" alt="Gaming Setup">
+        <img src="https://iili.io/J76A4LX.md.jpg" loading="lazy" class="Aimg1" alt="tech">
+        <img src="https://iili.io/J765JtI.md.jpg" loading="lazy" class="Aimg1" alt="Dev">
+        <img src="https://iili.io/J76AZ74.md.jpg" loading="lazy" class="Aimg1" alt="Dev">
       </div>
     </div>
   </div>
