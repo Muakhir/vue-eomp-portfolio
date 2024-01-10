@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
      <div class="container-fluid">
-       <router-link to="/"><img class="img-fluid bg-black logo" src="https://drive.google.com/uc?id=1H5IublVJo7v1REoSmqHr6KDuYGUrPaoc" alt="Logo" /></router-link>
+       <router-link to="/"><img class="img-fluid bg-black logo" src="https://iili.io/J76qLNa.png" alt="Logo" /></router-link>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
