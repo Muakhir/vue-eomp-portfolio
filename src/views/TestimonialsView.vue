@@ -18,11 +18,11 @@
     export default {
         computed:{
         testimonials(){
-            return this.$store.state;
+            return this.$store.state.testimonials;
         }
     },
     mounted(){
-        this.$store.dispatch('get')
+        this.$store.dispatch('getTestimonials')
     }    
     }
 </script>
