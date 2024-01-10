@@ -13,7 +13,7 @@
     <h2 class="d-flex justify-content-center">Skills</h2>
     <div class="container-fluid row Sard" v-if="skills">
     <div v-for="skill in skills" class="card" :key="skill.name" style="width: 18rem;">
-        <img :src="skill.image" class="card-img-top pimg" alt="...">
+        <img :src="skill.image" class="card-img-top" :class="Pimg" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{ skill.title }}</h5>
         <p>{{ skill.experience }}</p>
