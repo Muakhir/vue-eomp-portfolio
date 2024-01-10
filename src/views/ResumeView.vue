@@ -53,9 +53,9 @@
     border: 2px solid;
 }
 .card:hover{
-    background-color: black;
+    background-color: grey;
     color: gold;
-    box-shadow: 5px 5px 5px rgb(65, 54, 7);
+    box-shadow: 5px 15px 10px rgb(65, 54, 7);
 }
 .Sard{
     display: flex;
