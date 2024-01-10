@@ -54,8 +54,8 @@ export default createStore({
     },
     async getTestimonials(context) {
       const response = await fetch(dataUrl)
-      const data = await response.json()
-      context.commit('setTestimonials', data)
+      const {testimonials} = await response.json()
+      context.commit('setTestimonials', testimonials)
     },
     async getJobTitle(context) {
       const response = await fetch(dataUrl)
