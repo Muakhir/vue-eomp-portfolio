@@ -5,6 +5,7 @@
         <img :src="project.image" class="card-img-top pimg" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{ project.name }}</h5>
+        <p>{{ project.description }}</p>
         <a :href="project.gitHub" class="btn btn-primary" target="_blank">GitHub</a>
         <a :href="project.netlify" class="btn btn-primary" target="_blank">Netlify</a>
   </div>
@@ -54,5 +55,7 @@
 }
 .card:hover{
     box-shadow: 0px 5px 15px;
+    background-color: #545454;
+    color: #f6b342;
 }
 </style>
