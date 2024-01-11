@@ -35,8 +35,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: black;
-  background-color: grey;
+  color: rgb(255, 254, 254);
+  background-image: url("https://iili.io/J7b9TmX.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 
 nav {
