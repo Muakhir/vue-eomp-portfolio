@@ -2,7 +2,7 @@
     <div>
         <h2 class="d-flex justify-content-center hed">Testimonials</h2>
     <div class="container-fluid row Tard" v-if="testimonials">
-    <div v-for="testy in testimonials" class="card" :key="testy.name" style="width: 18rem;">
+    <div v-for="testy in testimonials" class="card" :key="testy.name" style="width: 18rem;height: 100vh">
         <img :src="testy.profile" class="card-img" :class="timg" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{ testy.name }} {{ testy.surname }}</h5>
@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 150px;
     margin-bottom: 20px;
 }
 .card:hover{
@@ -42,7 +42,7 @@
 }
 .card{
     border: 2px solid rgba(0, 0, 0, 0.744);
-    padding: 15px;
+    padding: px;
 }
 .card-img{
     height: 300px;
