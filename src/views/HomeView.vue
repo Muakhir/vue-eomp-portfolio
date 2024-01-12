@@ -49,5 +49,36 @@ h1{
 .typewriter{
   margin-top: 150px;
 }
+@media (max-width: 660px){
+  h1{
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px){
+  h1{
+    font-size: 20px;
+    padding: 20px;
+  }
+  .typewriter{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 400px){
+  h1{
+    font-size: 14px;
+  }
+  .typewriter{
+    margin-top: 50px;
+  }
+}
+@media (max-width: 300px){
+  h1{
+    font-size: 7.5px;
+  }
+  .typewriter{
+    margin-top: 50px;
+  }
+}
+
 </style>
 
