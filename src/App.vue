@@ -54,10 +54,6 @@ nav a {
   color: #2c3e50;
 }
 
-.logo{
-  width: 110px;
-  height: 30px;
-}
 
 
 </style>
