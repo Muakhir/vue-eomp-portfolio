@@ -2,7 +2,7 @@
     <div>
         <h2 class="d-flex justify-content-center hed">Testimonials</h2>
     <div class="container-fluid row Tard" v-if="testimonials">
-    <div v-for="testy in testimonials" class="card" :key="testy.name" style="width: 18rem;height: 100vh">
+    <div v-for="testy in testimonials" class="card" :key="testy.name" style="width: 18rem;height: 120vh">
         <img :src="testy.profile" class="card-img" :class="timg" alt="...">
     <div class="card-body">
         <h5 class="card-title">{{ testy.name }} {{ testy.surname }}</h5>
@@ -51,5 +51,26 @@
 }
 .hed{
     padding: 15px;
+}
+@media (max-width: 770px){
+    .Tard{
+        width: 45rem;
+        gap: 100px;
+    }
+}
+@media (max-width: 650px){
+    .Tard{
+        margin-left: 40px;
+        width: 20rem;
+        gap: 30px;
+    }
+}
+@media (max-width: 300px){
+    .Tard{
+        margin-left: 0;
+        padding-right: 23px;
+        width: 18rem;
+        gap: 20px;
+    }
 }
 </style>
