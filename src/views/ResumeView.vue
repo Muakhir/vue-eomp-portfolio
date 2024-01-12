@@ -64,4 +64,14 @@
     gap: 80px;
     margin-bottom: 20px;
 }
+@media (max-width: 800px){
+    .Sard{
+        margin-left: 3px;
+    }
+}
+@media (max-width: 400px){
+    .Eard{
+        margin-left: 1px;
+    }
+}
 </style>
