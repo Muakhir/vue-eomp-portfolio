@@ -1,7 +1,7 @@
 <template>
-<div class="container">
+<div class="container-fliud bg-light">
 <div class="row">
-    <p class="lead">Muakhir Portfolio
+    <p class="lead fw-bolder d-flex justify-content-center">AL-Mu'akhir Jones Portfolio
         &copy;<span>{{ currYear }}</span>
     </p>
 </div>
@@ -20,5 +20,10 @@ data(){
 </script>
 
 <style scoped>
-
+p{
+    color: #2c3e50;
+}
+p:hover{
+    color: #F6B342;
+}
 </style>
