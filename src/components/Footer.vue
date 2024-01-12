@@ -1,7 +1,7 @@
 <template>
-<div class="container position-fixed">
+<div class="container">
 <div class="row">
-    <p class="lead fw-bolder d-flex justify-content-center">AL-Mu'akhir Jones Portfolio
+    <p class="lead fw-bolder">AL-Mu'akhir Jones Portfolio
         &copy;<span>{{ currYear }}</span>
     </p>
 </div>
@@ -25,5 +25,9 @@ p{
 }
 p:hover{
     color: #F6B342;
+}
+.container{
+    position: relative;
+    bottom: 0;
 }
 </style>
