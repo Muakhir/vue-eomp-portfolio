@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container position-fixed">
 <div class="row">
     <p class="lead fw-bolder d-flex justify-content-center">AL-Mu'akhir Jones Portfolio
         &copy;<span>{{ currYear }}</span>
