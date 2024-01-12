@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid">
-    <div class="about">
+  <div class="container-fluid" >
+    <div class="about" v-if="about">
       <h2 class="d-flex justify-content-center mb-5">About</h2>
-      <div class="row mb-5" v-if="about">
+      <div class="row mb-5">
         <p class="lead" v-for="title in about" :key="title">
           {{ title }}
         </p>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+
   export default {
     computed:{
       about(){
@@ -38,7 +39,8 @@
     },
     mounted(){
       this.$store.dispatch('getAbout')
-    }
+    },
+ 
 
   }
 </script>
