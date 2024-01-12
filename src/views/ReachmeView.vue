@@ -56,7 +56,7 @@
                     <textarea v-model="message" placeholder="Don't BE SHY 🙄 "></textarea>
                   </div>
                   <div class="inputbox">
-                    <button type="submit" class="btn" >Submit</button>
+                    <button @click="submit" class="btn" >Submit</button>
                   </div>
                   </form>
                 </div>
