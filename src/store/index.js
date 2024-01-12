@@ -33,34 +33,54 @@ export default createStore({
   },
   actions: {
     async getAbout(context) {
-      const response = await fetch(dataUrl)
-      const {about} = await response.json()
-      context.commit('setAbout', about)
+      try{
+        const response = await fetch(dataUrl)
+        const {about} = await response.json()
+        context.commit('setAbout', about)
+      }
+      catch(error){
+        console.error('Error fetching About');
+      }
     },
     async getEducation(context) {
-      const response = await fetch(dataUrl)
-      const {education} = await response.json()
-      context.commit('setEducation', education)
+      try{
+        const response = await fetch(dataUrl)
+        const {education} = await response.json()
+        context.commit('setEducation', education)
+      }
+      catch(error){
+        console.error('Error fetching Education');
+      }
     },
     async getSkills(context) {
-      const response = await fetch(dataUrl)
-      const {skills} = await response.json()
-      context.commit('setSkills', skills)
+      try{
+        const response = await fetch(dataUrl)
+        const {skills} = await response.json()
+        context.commit('setSkills', skills)
+      }
+      catch(error){
+        console.error('Error Fetching Skills');
+      }
     },
     async getProjects(context) {
-      const response = await fetch(dataUrl)
-      const {projects} = await response.json()
-      context.commit('setProjects', projects)
+      try{
+        const response = await fetch(dataUrl)
+        const {projects} = await response.json()
+        context.commit('setProjects', projects)
+      }
+      catch(error){
+        console.error('Error Fetching Projects');
+      }
     },
     async getTestimonials(context) {
-      const response = await fetch(dataUrl)
-      const {testimonials} = await response.json()
-      context.commit('setTestimonials', testimonials)
-    },
-    async getJobTitle(context) {
-      const response = await fetch(dataUrl)
-      const data = await response.json()
-      context.commit('setJobTitle', data)
+      try{
+        const response = await fetch(dataUrl)
+        const {testimonials} = await response.json()
+        context.commit('setTestimonials', testimonials)
+      }
+      catch(error){
+        console.error('Error Fetching Testsimonials');
+      }
     }
   },
   modules: {

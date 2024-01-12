@@ -34,29 +34,29 @@
             </div>
                 <div class="col d-flex justify-content-end">
                 <div class="contactform">
-                  <form action="" method="post">
+                  <form @submit.prevent="submitform" action="https://formspree.io/f/xbjnlgoq" method="post" ref="form">
                       <h2 id="ch2">Contact</h2>
                       <div class="inputbox"> 
                         <h6>Name</h6>
-                            <input type="text" name="Name" placeholder="Enter Firstname" required>
+                            <input v-model="name" type="text" name="Name" placeholder="Enter Firstname">
                            
                       </div>
                       <div class="inputbox">
                         <h6>Surname</h6>
-                        <input  type="text" name="Surname" placeholder="Enter Lastname" required>
+                        <input v-model="surname" type="text" name="Surname" placeholder="Enter Lastname">
                         
                   </div>
                   <div class="inputbox">
                     <h6>Email</h6>
-                    <input  type="text" name="Email" placeholder="Email@gmail.com" required>
+                    <input v-model="email" type="text" name="Email" placeholder="Email@gmail.com">
                     
                   </div>
                   <div class="inputbox">
                     <h6  id="type">Type your Message...</h6>
-                    <textarea placeholder="Don't BE SHY 🙄 " required></textarea>
+                    <textarea v-model="message" placeholder="Don't BE SHY 🙄 "></textarea>
                   </div>
                   <div class="inputbox">
-                    <button class="btn" >Submit</button>
+                    <button type="submit" class="btn" >Submit</button>
                   </div>
                   </form>
                 </div>
@@ -67,7 +67,22 @@
 
 <script>
     export default {
-        
+        data(){
+          return{
+            name: "",
+            surname: "",
+            email: "",
+            message:""
+          }
+        },
+        methods: {
+          submitform(){
+            if(!this.name.trim() || !this.surname.trim() || !this.email.trim() || !this.message.trim()){
+              alert('Please enter your Info')
+            }
+            this.$refs.form.submit
+          }
+        }
     }
 </script>
 

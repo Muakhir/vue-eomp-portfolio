@@ -29,18 +29,20 @@
   }
 </script>
 
-<style >
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+<style src="@/assets/styles.css" >
+/* #app {
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: rgb(255, 254, 254);
   background-image: url("https://iili.io/J7b9TmX.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  
+  background-size: cover; 
 }
+  */
+  
+
 
 nav {
   padding: 30px;

@@ -44,9 +44,7 @@
 </script>
 
 <style scoped>
-.Rimg{
-  
-}
+
 .Aimg1{
   float: right;
   border-radius: 45px;
