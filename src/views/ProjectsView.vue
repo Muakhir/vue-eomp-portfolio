@@ -1,16 +1,18 @@
 <template>
-    <h2 class="d-flex justify-content-center">Projects</h2>
-    <div class="container-fluid row" v-if="projects">
-    <div v-for="project in projects" class="card" :key="project.name" style="width: 18rem;">
-        <img :src="project.image" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{ project.name }}</h5>
-        <p>{{ project.description }}</p>
-        <a :href="project.gitHub" class="btn btn-primary" target="_blank">GitHub</a>
-        <a :href="project.netlify" class="btn btn-primary" target="_blank">Netlify</a>
-  </div>
-</div>
-</div>
+    <main>
+        <h2 class="d-flex justify-content-center">Projects</h2>
+        <div class="container-fluid row" v-if="projects">
+        <div v-for="project in projects" class="card" :key="project.name" style="width: 18rem;">
+            <img :src="project.image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p>{{ project.description }}</p>
+            <a :href="project.gitHub" class="btn btn-primary" target="_blank">GitHub</a>
+            <a :href="project.netlify" class="btn btn-primary" target="_blank">Netlify</a>
+      </div>
+    </div>
+    </div>
+    </main>
 </template>
 
 <script>
@@ -67,4 +69,5 @@ img{
     padding: 5px;
    }
 }
+
 </style>

@@ -1,33 +1,58 @@
 <template>
-<div class="container">
-<div class="row">
-    <p class="lead fw-bolder">AL-Mu'akhir Jones Portfolio
-        &copy;<span>{{ currYear }}</span>
-    </p>
-</div>
-</div>
-</template>
-
-<script>
-export default {
-name:'FooterComp',
-data(){
-    return{
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+        <hr>
+        <div class="col">
+            <p class="lead fw-bold">© {{ currYear }} AL-Mu'akhir Jones. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </template>
+  
+  <script>
+  export default {
+    name: 'FooterComp',
+    data() {
+      return {
         currYear: new Date().getFullYear()
+      }
     }
-}
-}
-</script>
-
-<style scoped>
-p{
-    color: #2c3e50;
-}
-p:hover{
-    color: #F6B342;
-}
-.container{
-    position: relative;
-    bottom: 0;
-}
-</style>
+  }
+  </script>
+  
+  <style scoped>
+  .footer {
+    background-color: rgba(90, 90, 89, 0.537);
+    padding: 10px 0;
+  }
+  
+  .footer h5 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 26px;
+  }
+  
+  .footer p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 5px;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-link {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ffffff;
+  }
+  
+  .social-link:hover {
+    color: #f6cf42;
+  }
+  </style>
+  
+  

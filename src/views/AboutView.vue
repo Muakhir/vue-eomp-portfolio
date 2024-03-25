@@ -1,28 +1,22 @@
 <template>
-  <div class="container-fluid" >
-    <div class="about" v-if="about">
-      <h2 class="d-flex justify-content-center mb-5">About</h2>
-      <div class="row mb-5">
-        <p class="lead" v-for="title in about" :key="title">
-          {{ title }}
-        </p>
-     </div>
-      <div class="row Rimg">
-        <div class="col Aimg">
-          <img src="https://iili.io/J76T6uI.md.jpg" loading="lazy" class="Aimg2" alt="Gaming Setup">
-
-        </div>
-        <div class="col Aimg">
-          <img src="https://iili.io/J76A4LX.md.jpg" loading="lazy" class="Aimg1" alt="tech">
-
-        </div>
-        <div class="col Aimg">
-          <img src="https://iili.io/J765JtI.md.jpg" loading="lazy" class="Aimg2" alt="Dev">
-
-        </div>
-        <div class="col Aimg">
-          <img src="https://iili.io/J76AZ74.md.jpg" loading="lazy" class="Aimg3" alt="Dev">
-
+  <div>
+    <div class="container-fluid">
+      <div class="about">
+        <h2 class="about-heading">About</h2>
+        <div class="container">
+          <div class="row">
+            <p class="lead about-text">
+              Hey there! 👋 I'm Almuakhir Jones, a 20-year-old rockstar hailing from Rocklands, Mitchell's Plain. 🎸 My journey into the tech universe kicked off with a bang when I discovered my passion for web development. 💻 While I'm still awaiting my certificate from Lifechoices Coding Academy, I've been tinkering away, learning the ropes and building cool stuff on the web.
+  
+              But hey, life isn't just about coding, right? 🎨 I've had my fair share of adventures outside the digital realm too! From assisting in the electrical industry to throwing epic catering gigs for friends and family, I've dabbled in a bit of everything. 🛠️🍔
+  
+              Through it all, I've picked up some sweet skills like patience, adaptability, and being a team player. 🌟 And let me tell you, acing Matric with a bachelor's degree while doing the remote learning hustle was no easy feat! 🎓💪
+  
+              As I jam along on this wild ride, I'm stoked to bring my creativity and skills to the table, making waves in the ever-evolving world of tech and beyond! 🌊💻
+  
+              Thanks for stopping by my corner of the internet! Dive in and check out what I've been up to. 🚀✨
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -30,96 +24,27 @@
 </template>
 
 <script>
-
-  export default {
-    computed:{
-      about(){
-        return this.$store.state.about;
-      }
-    },
-    mounted(){
-      this.$store.dispatch('getAbout')
-    },
- 
-
-  }
+export default {
+}
 </script>
 
 <style scoped>
-
-.Aimg1{
-  float: right;
-  border-radius: 45px;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+.container-fluid{
+  height: 80vh;
 }
-.Aimg3{
-  float: right;
-  border-radius: 45px;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+.container{
+  margin-top: 75px;
+  background-color: rgba(38, 36, 36, 0.541);
 }
-.Aimg2{
-  float: left;
-  margin-left: 20px;
-  margin-top: 25px;
-  width: 490px;
-  height: 280px;
-  border-radius: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 720px){
-  .Rimg{
-    margin-left: 70px;
-  }
-  .Aimg1{
-    width: 500px;
-    margin-top: 0;
-    padding: 5px;
-    float: none;
-  }
-  .Aimg2{
-    margin-top: 0;
-    float: none;
-    margin-left: 3px;
-  }
-  .Aimg3{
-    padding: 5px;
-    float: none;
-  }
-
-}
-@media (max-width: 615px){
-  .Rimg{
-    margin-left: 0;
-    margin-right: 5px;
-  }
-  .Aimg{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    margin-bottom: 0;
-  }
-  .Aimg1{
-    width: 250px;
-    padding: 15px;
-  }
-  .Aimg2{
-    height: 150px;
-    width: 250px;
-    padding: 15px;
-    border-radius: 40px;
-  }
-  .Aimg3{
-    width: 250px;
-    padding: 15px;
-  }
+.about-heading {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 </style>

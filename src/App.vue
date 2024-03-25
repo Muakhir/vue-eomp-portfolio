@@ -4,6 +4,7 @@
       <NavBar/>
     </div>
   <router-view/>
+  <Footer/>
   </main>
   <!-- <nav>
     <router-link to="/">Home</router-link> |
@@ -13,7 +14,6 @@
     <router-link to="/testimonials">Testimonials</router-link> |
     <router-link to="/reachme">Reach Me</router-link>
   </nav> -->
-  <div><Footer/></div>
 </template>
 
 <script>
@@ -29,21 +29,18 @@
   }
 </script>
 
-<style src="@/assets/styles.css" >
-/* #app {
+<style >
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+#app {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: rgb(255, 254, 254);
   background-image: url("https://iili.io/J7b9TmX.png");
-  background-repeat: no-repeat;
   background-size: cover; 
+  height: auto;
 }
-  */
-  
-
-
 nav {
   padding: 30px;
   font-size: larger;
