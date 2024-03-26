@@ -1,17 +1,16 @@
 <template>
   <main>
     <section class="home">
-      <div class="container-fluid">
-        <div class="row me-5 ms-5">
-          <div class="col">
-            <div class="text-container">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6">
+            <div class="text-container text-center mb-4">
               <h1 class="h1 fade-in-animation">Welcome to my Portfolio</h1>
               <h1 class="h1 fade-in-animation" style="animation-delay: 0.5s;">My name is Al-Mu'akhir Jones</h1>
               <h1 class="h1 fade-in-animation" style="animation-delay: 1s;">An aspiring Full-Stack Developer</h1>
             </div>
           </div>
-  
-          <div class="col mt-5">
+          <div class="col-md-6">
             <img class="Himg img-fluid slide-in-right" src="https://iili.io/J7m9yib.jpg" loading="lazy" alt="">
           </div>
         </div>
@@ -22,26 +21,32 @@
 
 <script>
 export default {
- 
+
 }
 </script>
 
 <style scoped>
+.h1{
+  padding-bottom: 20px; 
+}
 main {
-  height: 85vh;
+  min-height: 100vh;
 }
 
 .Himg {
+  margin-bottom: 50px;
   max-width: 400px;
+  margin-top: 80px;
   height: 500px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.633);
+  transition: 0.3s ease-in-out;
+  border: 2px solid #ccc; /* Adding border */
 }
 
 .Himg:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.5);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.559);
 }
 
 .fade-in-animation {
@@ -77,37 +82,53 @@ main {
 }
 
 .text-container {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
-.text-container h1 {
-  padding-bottom: 20px;
-}
-
-@media (max-width: 660px) {
+@media (max-width: 992px) {
   .text-container {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1080px) {
   .text-container {
-    margin-top: 50px;
+    margin-top: 20px;
+  }
+  main{
+    height: 130vh;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .text-container {
-    margin-top: 50px;
+    margin-top: 10px;
+  }
+  img {
+    width: 250px;
+    height: 300px;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 576px) {
   .text-container {
-    margin-top: 50px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-container {
+    margin-top: 0;
+  }
+
+  .Himg {
+    margin-top: 20px;
   }
 }
 </style>
+
+
+
 
 
 

@@ -10,8 +10,8 @@
                 <h2 id="link"><i class="bi bi-link"></i> Links</h2>
                 <span class="text-black">GitHub: </span>
                 <a href="https://github.com/Muakhir" target="_blank"><i class="bi bi-github"></i></a><br>
-                <span class="text-black">Twitter/X: </span>
-                <a href="https://twitter.com/unbarredbow6173" target="_blank"><i class="bi bi-twitter-x"></i></a><br>
+                <span class="text-black">Linkedin: </span>
+                <a href="https://www.linkedin.com/in/almuakhir-jones-6996b5300/" target="_blank"><i class="bi bi-linkedin"></i></a><br>
             </div>
             </div>
             <div class="col ">
@@ -89,17 +89,20 @@
 <style scoped>
 main{
     color: rgb(255, 255, 255);
+    min-height: 100vh;
 }
 .box {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #F6B342;
-    padding: 5px;
+    background-color: #bb8b38;
+    padding: 15px;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
   .contactform {
+    margin-top: 20px;
     background-image: linear-gradient(#F6B342,black);
     padding: 5px;
     border-radius: 10px;

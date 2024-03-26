@@ -6,15 +6,11 @@
         <div class="container">
           <div class="row">
             <p class="lead about-text">
-              Hey there! 👋 I'm Almuakhir Jones, a 20-year-old rockstar hailing from Rocklands, Mitchell's Plain. 🎸 My journey into the tech universe kicked off with a bang when I discovered my passion for web development. 💻 While I'm still awaiting my certificate from Lifechoices Coding Academy, I've been tinkering away, learning the ropes and building cool stuff on the web.
-  
-              But hey, life isn't just about coding, right? 🎨 I've had my fair share of adventures outside the digital realm too! From assisting in the electrical industry to throwing epic catering gigs for friends and family, I've dabbled in a bit of everything. 🛠️🍔
-  
-              Through it all, I've picked up some sweet skills like patience, adaptability, and being a team player. 🌟 And let me tell you, acing Matric with a bachelor's degree while doing the remote learning hustle was no easy feat! 🎓💪
-  
-              As I jam along on this wild ride, I'm stoked to bring my creativity and skills to the table, making waves in the ever-evolving world of tech and beyond! 🌊💻
-  
-              Thanks for stopping by my corner of the internet! Dive in and check out what I've been up to. 🚀✨
+            Hello there! 👋 I'm Al-Mu'akhir Jones, a 20-year-old born on [12/12/2003], proud to call Rocklands, Mitchell's Plain my hometown. 🎸 My journey into the tech world began with a spark of curiosity that ignited my passion for web development. 💻 While I'm eagerly awaiting my certificate from Lifechoices Coding Academy, I've been diligently exploring the intricacies of web development, refining my skills, and crafting innovative projects.
+            Beyond coding, life has presented me with diverse opportunities. 🎨 From assisting in the electrical industry to organizing memorable catering events for friends and family, I've embraced a variety of experiences. 🛠️🍔
+            Throughout my journey, I've cultivated essential qualities such as patience, adaptability, and collaboration. 🌟 Achieving Matric with a bachelor's degree while navigating the challenges of remote learning was a significant milestone for me. 🎓💪
+            As I continue to navigate this exciting path, I'm enthusiastic about leveraging my creativity and skills to make meaningful contributions in the ever-evolving tech landscape and beyond! 🌊💻
+            Thank you for taking the time to explore my corner of the internet! Feel free to dive in and discover more about my endeavors. 🚀✨
             </p>
           </div>
         </div>
@@ -30,11 +26,12 @@ export default {
 
 <style scoped>
 .container-fluid{
-  height: 80vh;
+  min-height: 100vh;
 }
 .container{
   margin-top: 75px;
   background-color: rgba(38, 36, 36, 0.541);
+  margin-bottom: 10px;
 }
 .about-heading {
   text-align: center;

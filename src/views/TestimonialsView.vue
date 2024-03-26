@@ -1,76 +1,117 @@
 <template>
-    <div>
-        <h2 class="d-flex justify-content-center hed">Testimonials</h2>
-    <div class="container-fluid row Tard" v-if="testimonials">
-    <div v-for="testy in testimonials" class="card" :key="testy.name" style="width: 18rem;height: 120vh">
-        <img :src="testy.profile" class="card-img" :class="timg" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">{{ testy.name }} {{ testy.surname }}</h5>
-        <p>{{ testy.quotes }}</p>
-
-    </div>
-    </div>
-    </div>
-    </div>
+    <main>
+        <div>
+            <h2 class="d-flex justify-content-center hed">Testimonials</h2>
+            <transition-group name="slide">
+                <div class="container-fluid row justify-content-center Tard" v-if="testimonials">
+                    <div v-for="testy in testimonials" class="card" :key="testy.name">
+                        <img :src="testy.profile" class="card-img" alt="..." width="300" height="300">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ testy.name }} {{ testy.surname }}</h5>
+                            <p>{{ testy.quotes }}</p>
+                        </div>
+                    </div>
+                </div>
+            </transition-group>
+        </div>
+    </main>
 </template>
 
 <script>
-    export default {
-        computed:{
-        testimonials(){
+export default {
+    computed: {
+        testimonials() {
             return this.$store.state.testimonials;
         }
     },
-    mounted(){
+    mounted() {
         this.$store.dispatch('getTestimonials')
-    }    
     }
+}
 </script>
 
 <style scoped>
-.Tard{
+main{
+    height: 250vh;
+}
+.Tard {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 150px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-bottom: 20px;
 }
-.card:hover{
+
+.card:hover {
     background-color: rgb(3, 3, 3);
     color: gold;
     box-shadow: 5px 15px 10px rgb(65, 54, 7);
 }
-.card{
+
+.card {
+    margin-bottom: 100px;
+    height: 105vh;
+    max-width: 21rem;
+    width: 100%;
     border: 2px solid rgba(0, 0, 0, 0.744);
-    padding: px;
+    background-color: rgba(38, 36, 36, 0.541);
+    padding: 10px;
+    color: #fff;
+    animation: slideIn 0.5s ease-in-out; /* Add animation */
 }
-.card-img{
-    height: 300px;
+
+.card-img {
+    width: 100%;
+    height: 400px;
     border-radius: 15px;
     padding: 5px;
 }
-.hed{
+
+.hed {
     padding: 15px;
 }
-@media (max-width: 770px){
-    .Tard{
-        width: 45rem;
-        gap: 100px;
+
+@media (max-width: 1080px) {
+  main{
+    height: 450vh;
+  }
+}
+@media (max-width: 770px) {
+    .Tard {
+        gap: 0.5rem;
+    }
+    .card-img{
+        height: 300px;
     }
 }
-@media (max-width: 650px){
-    .Tard{
-        margin-left: 40px;
-        width: 20rem;
-        gap: 30px;
+
+@media (max-width: 650px) {
+    .Tard {
+        align-items: center;
+        margin-left: 4px;
+    }
+    .card-img{
+        height: 200px;
+    }
+    .card{
+        width: 16rem;
     }
 }
-@media (max-width: 300px){
-    .Tard{
-        margin-left: 0;
-        padding-right: 23px;
-        width: 18rem;
-        gap: 20px;
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
     }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-enter-active {
+    animation: slideIn 0.5s ease-in-out;
 }
 </style>
+
+
+
