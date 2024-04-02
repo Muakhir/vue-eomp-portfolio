@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <hr>
         <div class="col">

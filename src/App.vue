@@ -31,10 +31,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  background-image: url("https://iili.io/J7b9TmX.png");
-  background-size: cover; 
-  max-height: auto;
 }
+
+main{
+  background: linear-gradient(to bottom, #9e6b19, #2c3e50); /* Gradient background */
+}
+
 
 nav {
   padding: 30px;

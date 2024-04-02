@@ -54,7 +54,7 @@
   }
   
 main{
-    height: 180vh;
+    padding-bottom: 10%;
 }
 
   .Eard {

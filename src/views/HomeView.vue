@@ -7,7 +7,8 @@
             <div class="text-container text-center mb-4">
               <h1 class="h1 fade-in-animation">Welcome to my Portfolio</h1>
               <h1 class="h1 fade-in-animation" style="animation-delay: 0.5s;">My name is Al-Mu'akhir Jones</h1>
-              <h1 class="h1 fade-in-animation" style="animation-delay: 1s;">An aspiring Full-Stack Developer</h1>
+              <h1 class="h1 fade-in-animation" style="animation-delay: 1s;">An aspiring <span id="hlight" class="glowing-text">Full-Stack Developer</span></h1>
+              <a class="btn btn-primary" :href="pdfUrl" download="portfolio.pdf">Download CV</a>
             </div>
           </div>
           <div class="col-md-6">
@@ -21,16 +22,22 @@
 
 <script>
 export default {
-
+  data() {
+    return {
+      pdfUrl: 'https://drive.google.com/file/d/1nrZXa04NUJbh0JZhVTBa2LNbtHW7Ehn6/view?usp=drive_link'
+    };
+  }
 }
 </script>
+
+
 
 <style scoped>
 .h1{
   padding-bottom: 20px; 
 }
 main {
-  min-height: 100vh;
+  padding-bottom: 5%;
 }
 
 .Himg {
@@ -85,47 +92,49 @@ main {
   margin-top: 50px;
 }
 
-@media (max-width: 992px) {
-  .text-container {
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .text-container {
-    margin-top: 20px;
-  }
-  main{
-    height: 130vh;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .text-container {
     margin-top: 10px;
   }
   img {
-    width: 250px;
-    height: 300px;
+    width: 300px;
+    height: 250px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 300px) {
   .text-container {
     margin-top: 0;
+  }
+  img {
+    width: 200px;
+    height: 150px;
   }
 }
 
-@media (max-width: 576px) {
-  .text-container {
-    margin-top: 0;
-  }
+.glowing-text {
+  animation: glow 1s infinite alternate;
+}
 
-  .Himg {
-    margin-top: 20px;
+@keyframes glow {
+  0% {
+    color: rgb(241, 201, 59);
+  }
+  25% {
+    color: rgb(171, 151, 41);
+  }
+  50% {
+    color: rgb(194, 197, 51);
+  }
+  75% {
+    color: #9e6b19;
+  }
+  100% {
+    color: rgb(205, 189, 172);
   }
 }
 </style>
+
 
 
 

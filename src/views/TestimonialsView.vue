@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 main{
-    height: 250vh;
+    padding-bottom: 50px;
 }
 .Tard {
     display: flex;
@@ -72,11 +72,6 @@ main{
     padding: 15px;
 }
 
-@media (max-width: 1080px) {
-  main{
-    height: 450vh;
-  }
-}
 @media (max-width: 770px) {
     .Tard {
         gap: 0.5rem;
