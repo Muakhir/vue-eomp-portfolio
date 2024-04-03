@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="container-fluid">
     <section class="home">
       <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -8,10 +8,10 @@
               <h1 class="h1 fade-in-animation">Welcome to my Portfolio</h1>
               <h1 class="h1 fade-in-animation" style="animation-delay: 0.5s;">My name is Al-Mu'akhir Jones</h1>
               <h1 class="h1 fade-in-animation" style="animation-delay: 1s;">An aspiring <span id="hlight" class="glowing-text">Full-Stack Developer</span></h1>
-              <a class="btn btn-primary" :href="pdfUrl" download="portfolio.pdf">Download CV</a>
+              <a class="btn btn-custom" :href="pdfUrl" download="portfolio.pdf">Download CV</a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 d-flex justify-content-center align-items-center"> <!-- Updated class -->
             <img class="Himg img-fluid slide-in-right" src="https://iili.io/J7m9yib.jpg" loading="lazy" alt="">
           </div>
         </div>
@@ -30,35 +30,23 @@ export default {
 }
 </script>
 
-
-
 <style scoped>
-.h1{
-  padding-bottom: 20px; 
-}
-main {
-  padding-bottom: 5%;
-}
-
-.Himg {
-  margin-bottom: 50px;
-  max-width: 400px;
-  margin-top: 80px;
-  height: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.633);
-  transition: 0.3s ease-in-out;
-  border: 2px solid #ccc; /* Adding border */
+@media (max-width: 767px) { /* Adjustments for smaller screens */
+  .fade-in-animation, .slide-in-right {
+    animation: none; /* Disable animations on smaller screens */
+  }
 }
 
-.Himg:hover {
-  transform: scale(1.5);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.559);
-}
+@media (min-width: 768px) { /* Only apply animations on larger screens */
+  .fade-in-animation {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+  }
 
-.fade-in-animation {
-  opacity: 0;
-  animation: fade-in 1s ease-in forwards;
+  .slide-in-right {
+    opacity: 0;
+    animation: slide-in-right 1s ease-in forwards;
+  }
 }
 
 @keyframes fade-in {
@@ -70,11 +58,6 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.slide-in-right {
-  opacity: 0;
-  animation: slide-in-right 1s ease-in forwards;
 }
 
 @keyframes slide-in-right {
@@ -92,24 +75,30 @@ main {
   margin-top: 50px;
 }
 
-@media (max-width: 720px) {
-  .text-container {
-    margin-top: 10px;
-  }
-  img {
-    width: 300px;
-    height: 250px;
-  }
+.Himg {
+  margin-bottom: 50px;
+  max-width: 100%; /* Ensure image responsiveness */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.633);
+  transition: 0.5s ease-in-out;
+  border: 2px solid #a59797;
 }
 
-@media (max-width: 300px) {
-  .text-container {
-    margin-top: 0;
-  }
-  img {
-    width: 200px;
-    height: 150px;
-  }
+.Himg:hover {
+  transform: scale(1.5);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.559);
+}
+
+.btn-custom {
+  color: white;
+  background-color: rgba(58, 55, 55, 0.493);
+  transition: transform 0.5s ease;
+}
+
+.btn-custom:hover {
+  color: #9e6b19;
+  background-color: rgba(58, 55, 55, 0.493);
+  transform: scale(1.1);
 }
 
 .glowing-text {

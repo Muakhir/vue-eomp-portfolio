@@ -1,14 +1,13 @@
 <template>
-  <footer class="footer">
-    <div class="container-fluid">
-      <div class="row">
-        <hr>
-        <div class="col">
-          <p class="lead fw-bold">© {{ currYear }} AL-Mu'akhir Jones. All rights reserved.</p>
+  <main class="container-fluid">
+    <footer class="footer">
+        <div class="row">
+          <div class="col">
+            <p class="lead fw-bold">© {{ currYear }} AL-Mu'akhir Jones. All rights reserved.</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </main>
 </template>
 
 <script>

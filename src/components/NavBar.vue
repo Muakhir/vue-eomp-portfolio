@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <router-link to="/">
-        <h1 class="navbar-brand logo">A.Jones</h1>
+        <span class="navbar-brand lead logo">A.Jones</span>
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +42,7 @@ export default {
 <style scoped>
 .navbar-nav .nav-link:hover {
   color: gold;
+  text-decoration: none;
 }
 
 .navbar {
@@ -58,8 +59,9 @@ export default {
   animation: scaleAnimation 1s ease-in-out infinite alternate;
 }
 
-.nav-link{
+.nav-link {
   color: #fff;
+  text-decoration: none;
 }
 
 @keyframes scaleAnimation {

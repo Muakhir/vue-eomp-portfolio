@@ -27,7 +27,7 @@
                   <div class="text">
   
                     <h2><i class="bi bi-envelope-at"></i> Via Email</h2>
-                    <a href="mailto:almuakhirjones@gmail.com?" target="_blank" class="text-black">almuakhirjones@gmail.com</a>
+                    <a href="mailto:almuakhirjones@gmail.com?" target="_blank" class="email">almuakhirjones@gmail.com</a>
                   </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@ main{
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #bb8b38;
+    background-color: rgba(38, 36, 36, 0.541);
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 25px;
@@ -143,6 +143,18 @@ main{
     color:#080808;
   }
 i{
-    color: black;
+    color: rgb(17, 16, 16);
+}
+
+a i:hover{
+  color: #fff;
+}
+
+.email:hover{
+  color: #fff;
+}
+
+.email{
+  color: #000;
 }
 </style>

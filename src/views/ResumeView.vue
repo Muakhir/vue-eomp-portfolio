@@ -53,10 +53,10 @@
     }
   }
   
-main{
-    padding-bottom: 10%;
-}
-
+  main{
+    padding-bottom: 15%;
+  }
+  
   .Eard {
     display: flex;
     justify-content: center;
@@ -74,7 +74,7 @@ main{
   
   .card:hover {
     background-color: grey;
-    color: gold;
+    color: #F6B342;
     box-shadow: 5px 15px 10px rgb(65, 54, 7);
   }
   
@@ -90,11 +90,6 @@ main{
     margin-bottom: 20px;
   }
   
-  @media (max-width: 1080px) {
-  main{
-    height: 300vh;
-  }
-}
   @media (max-width: 800px) {
     .Sard {
       margin-left: 3px;
@@ -102,10 +97,16 @@ main{
   }
   
   @media (max-width: 400px) {
-    .Eard {
+    .Eard,
+    .card {
       margin-left: 1px;
+      animation: none; /* Remove animation for smaller screens */
+    }
+    main{
+      padding-bottom: 10%;
     }
   }
   </style>
+  
   
   

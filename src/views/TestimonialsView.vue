@@ -45,7 +45,7 @@ main{
 
 .card:hover {
     background-color: rgb(3, 3, 3);
-    color: gold;
+    color: #F6B342;
     box-shadow: 5px 15px 10px rgb(65, 54, 7);
 }
 
@@ -91,6 +91,10 @@ main{
     }
     .card{
         width: 16rem;
+    }
+    /* Remove animation for smaller screens */
+    .card {
+        animation: none; /* Disable animation */
     }
 }
 

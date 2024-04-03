@@ -49,10 +49,10 @@
         text-align: center;
         margin-bottom: 5px;
         background-color: black;
-        color: gold;
+        color: #F6B342;
     }
     .btn:hover{
-        background-color: gold;
+        background-color: #F6B342;
         color: black;
     }
     .card{
