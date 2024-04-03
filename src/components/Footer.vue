@@ -29,6 +29,7 @@ export default {
   width: 100%;
   background-color: rgba(90, 90, 89, 0.537);
   padding: 10px 0;
+  z-index: 999; /* Ensures the footer stays above other content */
 }
 
 .footer h5 {
@@ -57,6 +58,7 @@ export default {
   color: #f6cf42;
 }
 </style>
+
 
   
   

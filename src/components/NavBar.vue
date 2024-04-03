@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <router-link to="/">
-        <span class="navbar-brand lead logo">A.Jones</span>
+        <img class="navbar nav logo" src="https://iili.io/JNz0O7e.png" alt="logo">
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,9 +53,10 @@ export default {
 }
 
 .logo {
+  background-color: rgba(86, 85, 85, 0);
   color: #fff;
-  width: 200px;
-  border-radius: 100px;
+  width: 100px;
+  border-radius: 15%;
   animation: scaleAnimation 1s ease-in-out infinite alternate;
 }
 
@@ -73,4 +74,5 @@ export default {
   }
 }
 </style>
+
 

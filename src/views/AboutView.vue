@@ -65,7 +65,7 @@ main {
 }
 
 /* Responsive adjustments */
-@media (max-width: 300px) {
+@media (max-width: 720px) {
   .container {
     margin-top: 25px; 
   }

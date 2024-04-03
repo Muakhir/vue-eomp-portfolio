@@ -96,7 +96,7 @@
     }
   }
   
-  @media (max-width: 400px) {
+  @media (max-width: 720px) {
     .Eard,
     .card {
       margin-left: 1px;

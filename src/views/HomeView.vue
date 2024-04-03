@@ -6,13 +6,13 @@
           <div class="col-md-6">
             <div class="text-container text-center mb-4">
               <h1 class="h1 fade-in-animation">Welcome to my Portfolio</h1>
-              <h1 class="h1 fade-in-animation" style="animation-delay: 0.5s;">My name is Al-Mu'akhir Jones</h1>
-              <h1 class="h1 fade-in-animation" style="animation-delay: 1s;">An aspiring <span id="hlight" class="glowing-text">Full-Stack Developer</span></h1>
-              <a class="btn btn-custom" :href="pdfUrl" download="portfolio.pdf">Download CV</a>
+              <h1 class="h1 fade-in-animation d" style="animation-delay: 0.5s;">My name is Al-Mu'akhir Jones</h1>
+              <h1 class="h1 fade-in-animation d" style="animation-delay: 1s;">An aspiring <span id="hlight" class="glowing-text">Full-Stack Developer</span></h1>
+              <a class="btn btn-custom" :href="pdfUrl" download="portfolio.pdf" target="_blank">Download CV</a>
             </div>
           </div>
-          <div class="col-md-6 d-flex justify-content-center align-items-center"> <!-- Updated class -->
-            <img class="Himg img-fluid slide-in-right" src="https://iili.io/J7m9yib.jpg" loading="lazy" alt="">
+          <div class="col-md-6">
+            <img class="Himg img-fluid" src="https://iili.io/J7m9yib.jpg" loading="lazy" alt="">
           </div>
         </div>
       </div>
@@ -31,22 +31,36 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 767px) { /* Adjustments for smaller screens */
-  .fade-in-animation, .slide-in-right {
-    animation: none; /* Disable animations on smaller screens */
-  }
+.h1 {
+  padding-bottom: 10px; 
+}
+main {
+  padding-bottom: 5%;
 }
 
-@media (min-width: 768px) { /* Only apply animations on larger screens */
-  .fade-in-animation {
-    opacity: 0;
-    animation: fade-in 1s ease-in forwards;
+.show-720 {
+    display: none;
   }
 
-  .slide-in-right {
-    opacity: 0;
-    animation: slide-in-right 1s ease-in forwards;
-  }
+.Himg {
+  margin-bottom: 50px;
+  max-width: 400px;
+  margin-top: 40px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.633);
+  transition: 0.5s ease-in-out;
+  border: 2px solid #a59797;
+}
+
+.Himg:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.559);
+}
+
+.fade-in-animation {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
 
 @keyframes fade-in {
@@ -60,45 +74,22 @@ export default {
   }
 }
 
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .text-container {
   margin-top: 50px;
 }
 
-.Himg {
-  margin-bottom: 50px;
-  max-width: 100%; /* Ensure image responsiveness */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.633);
-  transition: 0.5s ease-in-out;
-  border: 2px solid #a59797;
+@media (max-width: 720px) {
+  img {
+    width: 300px;
+    height: 250px;
+  }
 }
 
-.Himg:hover {
-  transform: scale(1.5);
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.559);
-}
-
-.btn-custom {
-  color: white;
-  background-color: rgba(58, 55, 55, 0.493);
-  transition: transform 0.5s ease;
-}
-
-.btn-custom:hover {
-  color: #9e6b19;
-  background-color: rgba(58, 55, 55, 0.493);
-  transform: scale(1.1);
+@media (max-width: 300px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .glowing-text {
@@ -122,7 +113,20 @@ export default {
     color: rgb(205, 189, 172);
   }
 }
+
+.btn-custom {
+  color: white;
+  background-color: rgba(58, 55, 55, 0.493);
+  transition: transform 0.5s ease;
+}
+
+.btn-custom:hover {
+  color: #9e6b19;
+  background-color: rgba(58, 55, 55, 0.493);
+  transform: scale(1.1);
+}
 </style>
+
 
 
 
