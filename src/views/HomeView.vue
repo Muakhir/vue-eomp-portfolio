@@ -5,14 +5,15 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-md-6">
             <div class="text-container text-center mb-4">
-              <h1 class="h1 fade-in-animation">Welcome to my Portfolio</h1>
-              <h1 class="h1 fade-in-animation d" style="animation-delay: 0.5s;">My name is Al-Mu'akhir Jones</h1>
-              <h1 class="h1 fade-in-animation d" style="animation-delay: 1s;">An aspiring <span id="hlight" class="glowing-text">Full-Stack Developer</span></h1>
+              <h1 class="h1" ref="welcomeText">Welcome to my Portfolio</h1>
+              <h1 class="h1" ref="nameText">My name is Al-Mu'akhir Jones</h1>
+              <h1 class="h1" ref="roleText">An aspiring <span id="hlight" class="glowing-text">Full-Stack Developer</span></h1>
               <a class="btn btn-custom" :href="pdfUrl" download="portfolio.pdf" target="_blank">Download CV</a>
             </div>
           </div>
           <div class="col-md-6">
-            <img class="Himg img-fluid" src="https://iili.io/J7m9yib.jpg" loading="lazy" alt="">
+            <!-- Apply unique animation to this image -->
+            <img class="Himg img-fluid" ref="profileImage" src="https://iili.io/J7m9yib.jpg" loading="lazy" alt="">
           </div>
         </div>
       </div>
@@ -21,14 +22,94 @@
 </template>
 
 <script>
+import anime from 'animejs';
+
 export default {
   data() {
     return {
-      pdfUrl: 'https://drive.google.com/file/d/1nrZXa04NUJbh0JZhVTBa2LNbtHW7Ehn6/view?usp=drive_link'
+      pdfUrl: 'https://drive.google.com/file/d/1nrZXa04NUJbh0JZhVTBa2LNbtHW7Ehn6/view?usp=drive_link',
+      tiltAngle: 15 // Initial tilt angle, adjust for desired intensity
     };
+  },
+  mounted() {
+    // Animate elements using Anime.js
+    anime({
+      targets: this.$refs.welcomeText,
+      opacity: [0, 1],
+      translateY: ['-20px', '0'],
+      easing: 'easeInOutQuad',
+      duration: 1500 // Increase duration for smoother animation
+    });
+
+    anime({
+      targets: this.$refs.nameText,
+      opacity: [0, 1],
+      translateY: ['-20px', '0'],
+      easing: 'easeInOutQuad',
+      duration: 1500,
+      delay: 500 // Delay animation by 500ms
+    });
+
+    anime({
+      targets: this.$refs.roleText,
+      opacity: [0, 1],
+      translateY: ['-20px', '0'],
+      easing: 'easeInOutQuad',
+      duration: 1500,
+      delay: 1000 // Delay animation by 1000ms
+    });
+
+    anime({
+      targets: this.$refs.profileImage,
+      translateX: [
+        { value: '+=50px', duration: 1000 },
+        { value: '-=100px', duration: 1000 },
+        { value: '+=50px', duration: 1000 },
+        { value: '+=100px', duration: 1000 },
+        { value: '-=50px', duration: 1000 },
+        { value: '-=100px', duration: 1000 },
+        { value: '+=50px', duration: 1000 },
+        { value: '+=100px', duration: 1000 },
+        { value: '-=50px', duration: 1000 }
+      ],
+      translateY: [
+        { value: '+=50px', duration: 1000 },
+        { value: '-=100px', duration: 1000 },
+        { value: '+=50px', duration: 1000 },
+        { value: '+=100px', duration: 1000 },
+        { value: '-=50px', duration: 1000 },
+        { value: '-=100px', duration: 1000 },
+        { value: '+=50px', duration: 1000 },
+        { value: '+=100px', duration: 1000 },
+        { value: '-=50px', duration: 1000 }
+      ],
+      easing: 'easeInOutQuad',
+      loop: true
+    });
+
+    const btn = this.$el.querySelector('.btn-custom');
+
+    btn.addEventListener('mouseenter', () => {
+      anime({
+        targets: btn,
+        scale: 1.1,
+        duration: 300,
+        easing: 'easeInOutQuad'
+      });
+    });
+
+    btn.addEventListener('mouseleave', () => {
+      anime({
+        targets: btn,
+        scale: 1,
+        duration: 300,
+        easing: 'easeInOutQuad'
+      });
+    });
   }
 }
 </script>
+
 
 <style scoped>
 .h1 {
@@ -53,25 +134,13 @@ main {
   border: 2px solid #a59797;
 }
 
+.Himg {
+  /* Apply holographic effect */
+  filter: drop-shadow(0 0 10px #9e6b19);
+}
 .Himg:hover {
   transform: scale(1.1);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.559);
-}
-
-.fade-in-animation {
-  opacity: 0;
-  animation: fade-in 1s ease-in forwards;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .text-container {

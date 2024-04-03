@@ -6,4 +6,12 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import anime from 'animejs';
 createApp(App).use(store).use(router).mount('#app')
+
+anime({
+    targets: '.my-element',
+    translateX: 250,
+    easing: 'easeInOutQuad',
+    duration: 1000
+  });
