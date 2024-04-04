@@ -7,7 +7,7 @@
           <div class="row">
             <p class="lead about-text">
               Hello there! 👋 I'm Al-Mu'akhir Jones, a 20-year-old born on [12/12/2003], proud to call Rocklands, Mitchell's Plain my hometown. 🎸 My journey into the tech world began with a spark of curiosity that ignited my passion for web development. 
-              💻 I graduate from Lifechoices Coding Academy, Since then I've been diligently exploring the intricacies of web development, refining my skills, and crafting innovative projects. 
+              💻 I'm graduate from Lifechoices Coding Academy, Since then I've been diligently exploring the intricacies of web development, refining my skills, and crafting innovative projects. 
               Beyond coding, life has presented me with diverse opportunities. 🎨 From assisting in the electrical industry to organizing memorable catering events for friends and family, I've embraced a variety of experiences. 
               🛠️🍔 Throughout my journey, I've cultivated essential qualities such as patience, adaptability, and collaboration. 🌟 Achieving Matric with a bachelor's degree while navigating the challenges of remote learning was a significant milestone for me. 
               🎓💪 As I continue to navigate this exciting path, I'm enthusiastic about leveraging my creativity and skills to make meaningful contributions in the ever-evolving tech landscape and beyond! 🌊💻 Thank you for taking the time to explore my corner of the internet! 
