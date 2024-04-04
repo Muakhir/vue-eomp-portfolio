@@ -18,6 +18,9 @@ export default createStore({
     setAbout(state, value) {
       state.about = value
     },
+    setExperience(state, value) {
+      state.experience = value
+    },
     setEducation(state, value) {
       state.education = value
     },
@@ -40,6 +43,16 @@ export default createStore({
       }
       catch(error){
         console.error('Error fetching About');
+      }
+    },
+    async getExperience(context) {
+      try{
+        const response = await fetch(dataUrl)
+        const {experience} = await response.json()
+        context.commit('setExperience', experience)
+      }
+      catch(error){
+        console.error('Error fetching Experience');
       }
     },
     async getEducation(context) {

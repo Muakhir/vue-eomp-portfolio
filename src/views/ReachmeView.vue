@@ -106,7 +106,8 @@ main{
     background-image: linear-gradient(#F6B342,black);
     padding: 5px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%; /* Adjusted width to 100% */
+    max-width: 500px; /* Added max-width for responsiveness */
     margin-bottom: 50px;
   }
   .inputbox {
@@ -118,6 +119,8 @@ main{
     border-radius: 15px;
     color: #F6B342;
     text-align: center;
+    width: 100%; /* Adjusted width to 100% */
+    max-width: 400px; /* Added max-width for responsiveness */
   }
   input:hover{
     background-color: #545454ac;

@@ -1,7 +1,7 @@
 <template>
     <main>
         <div>
-            <h2 class="d-flex justify-content-center hed">Testimonials</h2>
+            <h2 class="d-flex justify-content-center hed">References</h2>
             <transition-group name="slide">
                 <div class="container-fluid row justify-content-center Tard" v-if="testimonials">
                     <div v-for="testy in testimonials" class="card" :key="testy.name">
@@ -77,7 +77,10 @@ main{
         gap: 0.5rem;
     }
     .card-img{
-        height: 300px;
+        height: 400px;
+    }
+    .card{
+        height: 116vh;
     }
 }
 
@@ -87,7 +90,7 @@ main{
         margin-left: 4px;
     }
     .card-img{
-        height: 200px;
+        height: 250px;
     }
     .card{
         width: 16rem;
@@ -100,10 +103,10 @@ main{
 
 @keyframes slideIn {
     from {
-        transform: translateX(-100%);
+        transform: translateY(100%);
     }
     to {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
