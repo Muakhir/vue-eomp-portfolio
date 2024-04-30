@@ -21,6 +21,10 @@
             </div>
           </div>
         </div>
+        <div>
+          <h2 class="d-flex justify-content-center">Badges</h2>
+          <img class="Pimg img-fluid" src="https://iili.io/Jg530Hx.png" alt="Scrum">
+        </div>
     </main>
   </template>
   
@@ -105,6 +109,20 @@
     main{
       padding-bottom: 10%;
     }
+  }
+  .Pimg{
+    width: 295px;
+    height: 350px;
+    border-radius: 5px;
+    border: 2px solid;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    animation: slideInFromLeft 0.5s ease forwards;
+  }
+  .Pimg:hover{
+    background-color: grey;
+    color: #F6B342;
+    box-shadow: 5px 15px 10px rgb(65, 54, 7);
   }
   </style>
   
