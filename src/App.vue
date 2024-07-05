@@ -34,6 +34,7 @@ export default {
 }
 
 main{
+  border-radius: 10px;
   background: linear-gradient(to bottom, #9e6b19, #2c3e50); /* Gradient background */
 }
 

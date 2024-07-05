@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row">
             <p class="lead about-text">
-              Hello there! 👋 I'm Al-Mu'akhir Jones, a 20-year-old born on [12/12/2003], proud to call Rocklands, Mitchell's Plain my hometown. 🎸 My journey into the tech world began with a spark of curiosity that ignited my passion for web development. 
+              Hello there! 👋 I'm Al-Mu'akhir Jones, a <span>{{ age }}</span>-year-old born on [12/12/2003], proud to call Rocklands, Mitchell's Plain my hometown. 🎸 My journey into the tech world began with a spark of curiosity that ignited my passion for web development. 
               💻 I'm a graduate of Lifechoices Coding Academy, Since then I've been diligently exploring the intricacies of web development, refining my skills, and crafting innovative projects. 
               Beyond coding, life has presented me with diverse opportunities. 🎨 From assisting in the electrical industry to organizing memorable catering events for friends and family, I've embraced a variety of experiences. 
               🛠️🍔 Throughout my journey, I've cultivated essential qualities such as patience, adaptability, and collaboration. 🌟 Achieving Matric with a bachelor's degree while navigating the challenges of remote learning was a significant milestone for me. 
@@ -22,6 +22,22 @@
 
 <script>
 export default {
+  data() {
+    return {
+      birthDate: new Date(2003, 11, 12), // December 12, 2003
+    };
+  },
+  computed: {
+    age() {
+      const today = new Date();
+      let age = today.getFullYear() - this.birthDate.getFullYear();
+      const m = today.getMonth() - this.birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < this.birthDate.getDate())) {
+        age--;
+      }
+      return age;
+    }
+  },
   mounted() {
     // Add animation class to the about element after the component is mounted
     if (window.innerWidth > 300) {
@@ -30,6 +46,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 main {

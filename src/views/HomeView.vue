@@ -27,7 +27,7 @@ import anime from 'animejs';
 export default {
   data() {
     return {
-      pdfUrl: 'https://drive.google.com/file/d/1nrZXa04NUJbh0JZhVTBa2LNbtHW7Ehn6/view?usp=drive_link',
+      pdfUrl: 'https://drive.google.com/file/d/1Jo6Z2wDPdQALsRNAGv267732ySPmXNpm/view?usp=drive_link',
       tiltAngle: 15 // Initial tilt angle, adjust for desired intensity
     };
   },
